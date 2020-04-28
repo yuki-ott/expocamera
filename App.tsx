@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
-import { StyleSheet, Text, View } from 'react-native';
 import HomeScreen from './screens/HomeScreen';
-import Page1DetailScreen from './screens/Page1DetailScreen';
 import LoadPalletScreen from './screens/LoadPalletScreen';
 import UnloadPalletScreen from './screens/UnloadPalletScreen';
 
@@ -14,19 +12,27 @@ const MainStack = createStackNavigator({
   Home: {
     screen: HomeScreen,
     navigationOptions: () => ({
-      title: 'Home'
+      title: 'Home',
+      headerTitleStyle: {
+      }
     })
   },
   LoadPallet: {
     screen: LoadPalletScreen,
     navigationOptions: () => ({
-      title: '積む'
+      title: '積む',
+      headerTitleStyle: {
+        backgroundColor: '#50d0b0'
+      },
     })
   },
   UnloadPallet: {
-    screen: LoadPalletScreen,
+    screen: UnloadPalletScreen,
     navigationOptions: () => ({
-      title: '卸し'
+      title: '卸し',
+      headerTitleStyle: {
+        backgroundColor: '#F0F8FF'
+      }
     })
   }
 });

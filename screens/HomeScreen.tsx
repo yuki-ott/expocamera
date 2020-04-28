@@ -24,8 +24,9 @@ export default class HomeScreen extends Component<Props, State> {
                 <TouchableOpacity style={styles.buttonUnloadContainer}
                         onPress = {() => {this._OnPress('UnloadPallet')}}
                         >
-                    <Text style={styles.buttonUnloadText}>卸　し</Text>
+                    <Text style={styles.buttonUnloadText}>降ろす</Text>
                 </TouchableOpacity>
+                <View style={{flex: 0.5}}></View>
             </View>
         )
     }
@@ -33,39 +34,39 @@ export default class HomeScreen extends Component<Props, State> {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        flex: 2.5,
         flexDirection: 'column',
         justifyContent: 'space-around'
     },
     buttonLoadContainer: {
         flex: 1,
-        padding: scale(35),
+        flexDirection: "row",
         margin: scale(50),
         backgroundColor: '#50d0b0',
         borderWidth: 3,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     buttonUnloadContainer: {
         flex: 1,
-        padding: scale(35),
+        flexDirection: "row",
         margin: scale(50),
-        backgroundColor: '#FFF',
+        backgroundColor: '#F0F8FF',
         borderWidth: 3,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     buttonLoadText: {
-        flex: 1,
         color: '#000',
         fontWeight: '500',
         fontSize: moderateScale(60),
         textAlign: 'center',
-        textAlignVertical: 'center'
     },
     buttonUnloadText: {
-        flex: 1,
         color: '#000',
         fontWeight: '500',
         fontSize: moderateScale(60),
         textAlign: 'center',
-        textAlignVertical: 'center'
     }
 });
 
